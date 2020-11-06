@@ -1,0 +1,38 @@
+<!--  
+	O background utilizado nesse projeto foi criado por bjdlzx Crédito: Getty Images/iStockphoto
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Companhia de Energia</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<div class="container-principal">
+	<form action="fatura.php" method="post" class="container-formulario">
+		<input type="text" name="cliente[]" required placeholder="Digite o código do cliente..." pattern="[0-9]+"></br>
+
+		<input type="text" name="cliente[]" required placeholder="Digite o nome do cliente..." pattern="^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$"></br>
+
+		<input type="text" name="cliente[]" required placeholder="Digite a quantidade de KWh consumidos(Ex.: 500.2)..." pattern="[\d.?!]*"></br>	
+	<div class="container-radios">
+		<input type="radio" id="residencia" name="cliente[]" value="residencia" checked="">
+		<label for="residencia">Residencial</label>
+
+		<input type="radio" id="industria" name="cliente[]" value="industria">
+		<label for="industria">Indústrial</label>
+
+		<input type="radio" id="comercio" name="cliente[]" value="comercio">
+		<label for="comercio">Comercial</label>
+	</div>
+
+	<div class="container-botoes">
+		<input type="reset" value="Limpar">
+		<input type="submit" value="Gerar Fatura">
+	</div>
+	</form>
+</div>
+</body>
+</html>
